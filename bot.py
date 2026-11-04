@@ -124,7 +124,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.PHOTO, handle_screenshot))
-    app.add_handler(CommandHandler("confirm", confirm_payment))
+    app.add_handler(MessageHandler(filters.Regex(r"^/confirm$") & filters.User(int(ADMIN_CHAT_ID)), confirm_payment))
 
     print("🤖 প্রিমিয়াম বট সফলভাবে সচল হয়েছে...")
     app.run_polling()
