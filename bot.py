@@ -10,7 +10,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 BKASH_NUM = "01759247217"
 NAGAD_NUM = "01338824580"
 ADMIN_USER = "@rabbibhai9"
-ADMIN_CHAT_ID = "YOUR_ADMIN_CHAT_ID_HERE"  # আপনার টেলিগ্রাম চ্যাট আইডি এখানে বসান
+ADMIN_CHAT_ID = "@rabbibhai9" 
 
 # /start হ্যান্ডলার - প্রিমিয়াম ওয়েলকাম মেনু
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -96,7 +96,7 @@ async def confirm_payment(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text("✅ ইউজারকে সফলভাবে কনফার্মেশন ও কন্টাক্ট মেসেজ পাঠানো হয়েছে।")
 
 if __name__ == '__main__':
-    TOKEN = "YOUR_BOT_TOKEN_HERE"  # আপনার বটের টোকেন এখানে বসান
+    TOKEN = "9016031285:AAHf6-B6rbIvWcnK280auGe89vpKnxOYvRY"
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
