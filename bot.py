@@ -1,3 +1,25 @@
+import os
+from flask import Flask
+from threading import Thread
+
+# ফ্লাস্ক সার্ভার তৈরি করা যাতে রেন্ডার পোর্ট পেয়ে যায়
+app = Flask('')
+
+@app.route('/')
+def home():
+    I am alive!
+
+def run():
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
+# বটের কোড শুরু হওয়ার আগেই এটি কল করতে হবে
+if __name__ == "__main__":
+    keep_alive()
+    # এখানে আপনার মূল বটের কোড বা স্টার্ট ফাংশন থাকবে
 import logging
 import re
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
