@@ -32,7 +32,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 BKASH_NUM = "01759247217"
 NAGAD_NUM = "01338824580"
 ADMIN_USER = "@rabbibhai9"
-ADMIN_CHAT_ID = "8872137705" 
+ADMIN_CHAT_ID = "8160215257" 
 
 # /start হ্যান্ডলার - প্রিমিয়াম ওয়েলকাম মেনু
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
